@@ -1,0 +1,99 @@
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" rel="stylesheet">
+<div *ngIf="!(vacanze[0].control || vacanze[1].control || vacanze[2].control); then thenBlock1; else elseBlock"></div>
+<ng-template #thenBlock1>
+  <br>
+  <br>
+  <br>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4" style="width:400px; margin-left: auto; margin-right: auto;"  *ngFor="let element of vacanze index as i">
+      <div class="card mb-4" >
+        <img class="card-img-top" src="{{element.immagine}}" alt="Card image">
+        <div class="card-body">
+          <div class="card-body" style="background-color: orange; margin-right: 23%; margin-left: 20%;">
+          <h4 class="card-title" style="font-family: agenziaviaggi ;" align="center">{{element.nome}}</h4>
+          </div>
+          <button type="button" class="btn" (click)="bottone(element)" style="width:200px; margin-left: 20%; margin-right: 20%;" [ngClass]="{'messico' : vacanze[i].nome =='MESSICO','roma' : vacanze[i].nome=='ROMA','brasile' : vacanze[i].nome=='BRASILE',}">più informazioni</button>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+</ng-template>
+
+<ng-template #elseBlock>
+    <div *ngIf="vacanze[0].control; then thenBlock2; else elseBlock2"></div>
+  
+    <ng-template #thenBlock2>
+      <div class="background0">
+      <br>
+      <br>
+      <br>
+<div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="card mb-5" style="width: 400px; margin-left: 5%;">
+          <img class="card-img-top" src="{{vacanze[0].immagine}}" alt="Card image">
+          <div class="card-body" style="background-color: orangered;">
+            <h4 class="card-title" style="font-family: agenziaviaggi;" align="center">{{vacanze[0].nome}}</h4>
+            <p class="card-text"><strong>COSTO :</strong>{{vacanze[0].costo}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+      <button type="button" class="btn " style="margin-left: 45%; background-color: orangered;" (click)="home()">torna alla home</button>
+    </div>
+</ng-template>
+
+<ng-template #elseBlock2>
+  <div *ngIf="vacanze[1].control; then thenBlock3; else elseBlock3"></div>
+
+  <ng-template #thenBlock3>
+   <div class="background1">
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="card mb-5" style="width: 400px; margin-left: 5%;">
+              <img class="card-img-top" src="{{vacanze[1].immagine}}" alt="Card image">
+              <div class="card-body" style="background-color: orangered;">
+                <h4 class="card-title" style="font-family: agenziaviaggi;" align="center">{{vacanze[1].nome}}</h4>
+                <p class="card-text"><strong>COSTO :</strong>{{vacanze[1].costo}}</p>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
+        <button type="button" class="btn " style="margin-left: 45%; background-color: orangered;" (click)="home()">torna alla home</button>
+    </div>
+</ng-template>
+<ng-template #elseBlock3>
+    <div *ngIf="vacanze[2].control;then thenBlock4"></div>
+    <ng-template #thenBlock4>
+     <div class="background2">
+      <br>
+      <br>
+      <br>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="card mb-5" style="width: 400px; margin-left: 5%;">
+              <img class="card-img-top" src="{{vacanze[2].immagine}}" alt="Card image">
+              <div class="card-body" style="background-color: orangered;">
+                <h4 class="card-title" style="font-family: agenziaviaggi;" align="center">{{vacanze[2].nome}}</h4>
+                <p class="card-text"><strong>COSTO :</strong>{{vacanze[2].costo}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        <button type="button" class="btn" style="margin-left: 45%; background-color: green;" (click)="home()">torna alla home</button>
+    </div>
+    </ng-template>
+  </ng-template>
+</ng-template>
+</ng-template>
