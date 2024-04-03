@@ -1,19 +1,7 @@
-.card {
-    background-color: transparent ;
-  }
-  
-.messico{
-    background-color: orangered;
-}
-.roma{
-    background-color: skyblue;
-}
-.brasile{
-    background-color: green;
-}
+
 
 .background0{
-    background-image: url("../../assets/zona\ lavica.jpg");
+    background-image: url("https://www.ticonsiglio.com/wp-content/uploads/2023/03/aeroporto-lavoro.jpg");
         background-size: cover;
         background-position: center center;
         height: 805px;
@@ -25,7 +13,7 @@
       
 }
 .background1{
-    background-image: url("../../assets/zona\ glaciale.jpg");
+    background-image: url("https://www.ticonsiglio.com/wp-content/uploads/2023/03/aeroporto-lavoro.jpg");
         background-size: cover;
         background-position: center center;
         height: 805px;
@@ -37,7 +25,7 @@
       
 }
 .background2{
-    background-image: url("../../assets/foresta\ 2.jpg");
+    background-image: url("https://www.ticonsiglio.com/wp-content/uploads/2023/03/aeroporto-lavoro.jpg");
         background-size: cover;
         background-position: center center;
         height: 805px;
@@ -47,9 +35,4 @@
         z-index: -1;
       
       
-}
-
-@font-face {
-    font-family: agenziaviaggi;
-    src: url(../../assets/Pokemon\ Solid.ttf);
 }
